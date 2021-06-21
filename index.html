@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chat app</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="chat-window">
+      <!-- for outputing chat message -->
+      <div id="output"></div>
+      <div id="typing"></div>
+    </div>
+
+    <form class="form-signin container">
+      <h1 class="h3 mb-3 fw-normal">Chat With Me</h1>
+
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="handle"
+          placeholder="Enter the Name"
+          required
+        />
+      </div>
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="message"
+          placeholder="Enter a Message"
+          required
+        />
+      </div>
+
+      <button id="button" class="w-100 btn btn-lg btn-primary p-5">Send</button>
+    </form>
+
+    <script src="socket.io/socket.io.js"></script>
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+    <script src="/client.js"></script>
+  </body>
+</html>
