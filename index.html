@@ -29,7 +29,7 @@
           class="form-control"
           id="handle"
           placeholder="Enter the Name"
-          required
+          
         />
       </div>
       <div class="form-floating">
@@ -38,13 +38,41 @@
           class="form-control"
           id="message"
           placeholder="Enter a Message"
-          required
+          
         />
       </div>
 
       <button id="button" class="w-100 btn btn-lg btn-primary p-5">Send</button>
+      <hr />
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            remote
+            <video id="rVideo" autoplay="autoplay" muted></video>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            local
+            <video id="lVideo" autoplay="autoplay" muted></video>
+          </div>
+        </div>
+        <span id="disID"></span>
+        <input
+        type="text"
+        class="form-control"
+        id="connId"
+        placeholder="Enter a Connection ID"
+        
+      />
+    </div>
+
+    <button id="conn_button" class="w-100 btn btn-lg btn-success  btn-block ">Connection</button>
+    <button id="call_button" class="w-100 btn btn-lg btn-danger btn-block ">Call<button>
+
+      </div>
     </form>
 
+    <script src=" https://unpkg.com/peerjs@1.3.2/dist/peerjs.min.js"></script>
+   
     <script src="socket.io/socket.io.js"></script>
     <!-- <script src="/socket.io/socket.io.js"></script> -->
     <script src="/client.js"></script>
